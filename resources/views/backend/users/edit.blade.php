@@ -1,0 +1,108 @@
+@extends('backend.layout')
+@section('title', 'Edit User')
+
+
+@section('content')
+    <section class="content-header">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">
+                    <b>Edit The Selected User</b>
+                </h3>
+
+            </div>
+            <div class="box-body">
+                <form action="{{ route('user.update', $user->id) }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                    @isset($user->user_file)
+                        <div class="form-group">
+                            <label for="user_file">The Current Image</label>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <img width=150 height=150 src="/images/users/{{ $user->user_file }}" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    @endisset
+                    <div class="form-group">
+                        <label for="user_file">Select The Image</label>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input class="form-control" type="file" name="user_file" value="{{ $user->user_file }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name LastName</label>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input class="form-control" type="text" name="name" value="{{ $user->name }}"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">UserName"Email"</label>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input class="form-control" type="email" name="email" value="{{ $user->email }}"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input type="password" name="password" class="form-control"
+                                    placeholder="At Least 6 Characteres" autocomplete="new-password" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Confirm Password</label>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input type="password" name="password_confirmation" class="form-control"
+                                    placeholder="At Least 6 Characteres" id="password-confirm" autocomplete="new-password"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    @if ($user->role == 'admin')
+                        <div class="form-group">
+                            <label for="role">Role</label>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <select name="role" class="form-control" required>
+                                        <option value="-1">Select</option>
+                                        <option {{ $user->role == 'admin' ? "selected=''" : '' }} value="admin">Admin
+                                        </option>
+                                        <option {{ $user->user_status == 'user' ? "selected=''" : '' }} value="user">User
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                    <div class="form-group">
+
+                        <input type="hidden" name="old_file" value="{{ $user->user_file }}">
+
+                        <div align="right" class="box-footer">
+                            <button class=" btn btn-primary" type="submit"><b>Update</b></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+@endsection
+
+@section('css')
+@endsection
+
+@section('js')
+@endsection
