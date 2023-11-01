@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# CMS Project Name
+# MB_CMS_Training_Project
 
-**CMS Project Name** is an open-source Content Management System (CMS) designed to facilitate the efficient creation, management, and publication of websites.
+**MB_CMS_Training_Project** is an open-source Content Management System (CMS) designed to facilitate the efficient creation, management, and publication of websites.
 
 ## Key Features
 
