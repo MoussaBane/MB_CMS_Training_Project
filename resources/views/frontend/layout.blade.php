@@ -16,6 +16,21 @@
     <!-- Custom styles for this template -->
     <link href="/frontend/css/modern-business.css" rel="stylesheet">
 
+    <style type="text/css">
+        body {
+            background: url('/images/backgrounds/background_003.avif') no-repeat center fixed;
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            background-size: cover;
+
+            /* Définit la couleur du texte en blanc */
+        }
+
+        .text-color {
+            color: white;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -23,7 +38,7 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('home.index') }}"><b>MB CMS_T</b></a>
+            <a class="navbar-brand" href="{{ route('home.index') }}"><b style="font-size: 30px;">MB CMS_T</b></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -46,8 +61,8 @@
                         <a class="nav-link" href="{{ route('contact_us.form') }}"><b>Contact Us</b></a>
                     </li>
                     @if (Auth::user() && Auth::user()->role == 'admin')
-                        <li class="nav-item ">
-                            <a class="nav-link" href="{{ route('admin') }}"><b>Admin Page</b></a>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ route('admin') }}"><b>Admin_Panel</b></a>
                         </li>
                     @endif
                     {{-- @if (Auth::user() && Auth::user()->role == 'user')
@@ -98,7 +113,9 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white"><b>MB CMS</b> {{ $footer }}</p>
+            <p class="m-0 text-center text-white"><a href="{{ route('home.index') }}"><b>MB CMS_T</b></a>
+                {{ $footer }}.
+                By <b>Moussa BANE --MB--</b></p>
         </div>
         <!-- /.container -->
     </footer>

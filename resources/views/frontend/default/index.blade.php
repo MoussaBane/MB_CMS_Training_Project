@@ -33,21 +33,20 @@
     </header>
 
     <!-- Page Content -->
-    <div class="container">
-
+    <div class="container ">
         <!-- Blog Section -->
-        <h2 class="mt-4 mb-4"><b>Blog</b></h2>
+        <h2 class="mt-4 mb-4 text-color"><b>Blog</b></h2>
 
         <div class="row">
 
             @foreach ($blogs as $blog)
                 <div class="col-lg-4 col-sm-6 portfolio-item">
                     <div class="card h-100">
-                        <a href="#"><img width=200 height=200 class="card-img-top"
-                                src="/images/blogs/{{ $blog->blog_file }}" alt="image"></a>
+                        <a href="{{ route('f_blog.detail', $blog->blog_slug) }}"><img width=200 height=200
+                                class="card-img-top" src="/images/blogs/{{ $blog->blog_file }}" alt="image"></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">{{ $blog->blog_title }}</a>
+                                <a href="{{ route('f_blog.detail', $blog->blog_slug) }}">{{ $blog->blog_title }}</a>
                             </h4>
                             <p class="card-text">{!! Str::substr($blog->blog_content, 0, 182) !!}</p>
                         </div>
@@ -61,11 +60,16 @@
         <!-- Features Section -->
         <div class="row mt-4">
             <div class="col-lg-6">
-                <h2>{{ $home_title }}</h2>
-                {!! $home_detail !!}
+                <div class=" card">
+                    <div class=" card-body">
+                        <h2 align='center'>{{ $home_title }}</h2>
+                        <hr>
+                        {!! $home_detail !!}
+                    </div>
+                </div>
             </div>
             <div class="col-lg-6">
-                <img class="img-fluid rounded" src="/images/settings/{{ $home_image }}" alt="home_image">
+                <img class="img-fluid rounded h-100" src="/images/settings/{{ $home_image }}" alt="home_image">
                 {{-- @include('frontend.default.calendar') --}}
             </div>
         </div>
@@ -74,15 +78,20 @@
         <hr>
 
         <!-- Call to Action Section -->
-        <div class="row mb-4">
+        <div class="row mb-4 ">
             <div class="col-md-8">
-                <p>{{ $home_slogan }}</p>
+                <div class=" card">
+                    <div class=" card-body">
+                        <p>{{ $home_slogan }}</p>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
-                <a class="btn btn-lg btn-secondary btn-block" href="{{ route('contact_us.form') }}"><b>Contact Us</b></a>
+                <a class="btn btn-lg btn-outline-light btn-block" href="{{ route('contact_us.form') }}"><b
+                        style="color: black">Contact
+                        Us</b></a>
             </div>
         </div>
-
     </div>
     <!-- /.container -->
 

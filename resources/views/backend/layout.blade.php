@@ -58,7 +58,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <style type="text/css">
         .content-wrapper {
-            background: url('/images/backgrounds/background_002.jpg') no-repeat center fixed;
+            background: url('/images/backgrounds/background_003.avif') no-repeat center fixed;
             -moz-background-size: cover;
             -webkit-background-size: cover;
             background-size: cover;
@@ -219,10 +219,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <footer class="main-footer">
             <!-- To the right -->
             <div class="pull-right hidden-xs">
-                Anything you want
+                By <b>Moussa BANE --MB--</b>
             </div>
             <!-- Default to the left -->
-            <strong>Copyright &copy; 2023 <a href="#">MB_CMS</a>.</strong> A Powerful Customer Management System.
+            <strong>Copyright &copy; 2023 <a href="{{ route('admin') }}">MB_CMS_T</a>.</strong> The Best Way To Manage
+            Your Customer
+            Content.
         </footer>
 
 

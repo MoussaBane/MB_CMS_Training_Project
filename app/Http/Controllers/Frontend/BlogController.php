@@ -10,7 +10,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogs = Blogs::all()->sortBy('blog_must');
+        $blogs = Blogs::orderBy('blog_must', 'desc')->get();
         return view("frontend.blogs.index", compact('blogs'));
     }
 

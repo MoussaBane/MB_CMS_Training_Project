@@ -4,36 +4,49 @@
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
-        <h1 class="mt-4 mb-3 mb-4">{{ $blog->blog_title }}</h1>
+        <h1 class="mt-4 mb-3 mb-4 text-color"><b>{{ $blog->blog_title }}</b></h1>
 
         <div class="row">
 
             <!-- Post Content Column -->
             <div class="col-lg-8">
 
-                <!-- Preview Image -->
-                <img class="img-fluid rounded w-100 h-50" src="/images/blogs/{{ $blog->blog_file }}" alt="image">
+                <div class=" card ">
+                    <div class=" card-body">
+                        <!-- Preview Image -->
+                        <img class="img-fluid rounded w-100 h-50" src="/images/blogs/{{ $blog->blog_file }}" alt="image">
+                    </div>
+                </div>
 
-                <hr class="mt-4 mb-4">
+                <br>
 
-                <!-- Date/Time -->
-                <p>Posted on {{ $blog->created_at->format('d/m/y  h:i') }}</p>
+                <div class="card my-lg-auto">
+                    <div class=" card-body">
+                        <hr class="mt-0 mb-3">
 
-                <hr class="mt-4 mb-4">
+                        <!-- Date/Time -->
+                        <p>Posted on {{ $blog->created_at->format('d/m/y  h:i') }}</p>
 
-                <p>
-                    {!! $blog->blog_content !!}
-                </p>
+                        <hr class="mt-2 mb-2">
 
+                        <p>
+
+
+                            {!! $blog->blog_content !!}
+
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- Sidebar Widgets Column -->
-            <div class="col-md-4">
+            <div class="col-lg-4">
 
                 <!-- Side Widget -->
-                <div class="card my-4">
-                    <h5 class="card-header">Other Blogs</h5>
+                <div class="card">
                     <div class="card-body">
+                        <h3 align='center'><b>Other Blogs</b></h3>
+                        <hr>
                         <ul class="list-group">
                             @foreach ($blog_list as $blog_item)
                                 <a href="{{ route('f_blog.detail', $blog_item->blog_slug) }}">
@@ -48,6 +61,7 @@
             </div>
 
         </div>
+        <br><br>
         <!-- /.row -->
 
     </div>

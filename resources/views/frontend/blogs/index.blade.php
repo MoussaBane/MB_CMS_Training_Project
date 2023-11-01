@@ -5,7 +5,7 @@
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
-        <h1 class="mt-4 mb-3">Blogs
+        <h1 class="mt-4 mb-3 text-color"><b>Blogs</b>
             <small>List Of The Blogs</small>
         </h1>
 
