@@ -7,22 +7,32 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# MB_CMS_Training_Project
+# CMS Project Name
 
-**MB_CMS_Training_Project** is an open-source Content Management System (CMS) designed to facilitate the efficient creation, management, and publication of websites.
+![Project CMS Logo](logo_url.png)
+
+**MB_CMS_Training** is an open-source Content Management System designed to streamline the creation, management, and publication of websites. It provides a user-friendly interface for both administrators and users, along with extensive flexibility to customize the content.
 
 ## Key Features
 
-- Easy content management
-- User-friendly administration interface
-- Layout and design customization
-- User and role management
-- Plugin support
-- SEO optimization
+- Easy content management, including articles, images, and more.
+- Intuitive admin interface for content creation and editing.
+- Advanced layout and site design customization.
+- User and role management for precise access control.
+
+## Demo
+    Coming Soon
 
 ## Installation
 
+To install **MB_CMS_Training**, follow these steps:
+
 1. Clone this repository to your web server.
-2. Import the database from the included SQL file.
-3. Configure the database connection settings in `config.php`.
+
+2. Create a MySQL database and import the included SQL file (`database.sql`).
+
+3. Configure database connection settings in the `config.php` file.
+
 4. Access your site's URL and follow the initial setup steps.
+
+
