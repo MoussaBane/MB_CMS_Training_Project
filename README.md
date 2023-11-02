@@ -33,4 +33,13 @@ To install **MB_CMS_Training**, follow these steps:
 
 4. Access your site's URL and follow the initial setup steps.
 
+## Getting Started
+
+1. Access the admin panel by navigating to `[yourwebsite.com/admin](http://127.0.0.1:8000/admin)` or `[yourwebsite.com/admin/login](http://127.0.0.1:8000/admin/login)`.
+
+2. Use your admin credentials to log in.
+
+3. Start managing your content, users, and settings from the intuitive admin dashboard.
+
+4. See your modifications yourself by navigating to `[yourwebsite.com/](http://127.0.0.1:8000/)`
 
