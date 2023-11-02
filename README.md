@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# CMS Project Name
+# MB_CMS_Training
 
 **MB_CMS_Training** is an open-source Content Management System designed to streamline the creation, management, and publication of websites. It provides a user-friendly interface for both administrators and users, along with extensive flexibility to customize the content.
 
