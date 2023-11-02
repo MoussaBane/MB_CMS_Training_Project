@@ -1,6 +1,6 @@
 @extends('backend.layout')
 @php
-    use Illuminate\Support\Carbon;
+    use Carbon\CarbonInterface;
 @endphp
 @section('title', 'Admin Home Page')
 
@@ -54,6 +54,7 @@
                                     <a href="{{ route('admin') . '/message/' . $message->id }}" class="name">
                                         <small class="text-muted pull-right"><i class="fa fa-clock-o"></i>
                                             {{ $message->created_at->diffForHumans() }}</small>
+                                        {{-- {{ $message->created_at->diffForHumans(now(), CarbonInterface::DIFF_RELATIVE_AUTO) }} --}}
                                         <b>{{ $message->full_name }}</b>
                                         <br>
                                         <small>{{ $message->from }}</small>

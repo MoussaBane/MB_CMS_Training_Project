@@ -223,8 +223,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             <!-- Default to the left -->
             <strong>Copyright &copy; 2023 <a href="{{ route('admin') }}">MB_CMS_T</a>.</strong> The Best Way To Manage
-            Your Customer
-            Content.
+            Your Application's Content.
         </footer>
 
 
