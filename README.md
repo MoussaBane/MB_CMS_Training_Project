@@ -19,7 +19,7 @@
 - User and role management for precise access control.
 
 ## Demo
-    Coming Soon
+    https://www.youtube.com/watch?v=Vf1W5C0uk3w&ab_channel=MoussaBane
 
 ## Installation
 
