@@ -9,8 +9,6 @@
 
 # CMS Project Name
 
-![Project CMS Logo](logo_url.png)
-
 **MB_CMS_Training** is an open-source Content Management System designed to streamline the creation, management, and publication of websites. It provides a user-friendly interface for both administrators and users, along with extensive flexibility to customize the content.
 
 ## Key Features
